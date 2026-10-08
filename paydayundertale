@@ -1,0 +1,89 @@
+# PAYDAY 2 × Undertale — Underground Heist
+
+A mashup mod concept for Undertale. Undertale is the required host game; PAYDAY 2 supplies the heist structure, crew roles, equipment, alarms, objectives, and dialogue flavor.
+
+## Current status
+- Design/source prototype: created
+- Host game: Undertale (player-owned copy required)
+- Multiplayer: design target only; not implemented/tested yet
+- Playable build: not yet available
+- Melty release: draft only; do not publish yet
+
+## Core loop
+1. Enter a modified Undertale area.
+2. Choose a PAYDAY-style contract.
+3. Complete stealth/objective phases.
+4. Trigger or avoid an alarm.
+5. Survive the escape sequence.
+6. Return to the Undertale flow.
+
+## Important packaging rule
+The player's Undertale game files are not included. The mod must read the required content from the player's own Undertale installation.
+
+{
+  "id": "underground_heist_01",
+  "title": "The Underground Job",
+  "hostGame": "Undertale",
+  "phases": ["infiltration", "heist", "escape"],
+  "alarmStates": ["silent", "suspicious", "loud"],
+  "crew": ["Dallas", "Chains", "Wolf", "Hoxton"],
+  "multiplayer": {
+    "target": true,
+    "implemented": false,
+    "maxPlayers": null,
+    "connect": null
+  }
+}
+
+# Underground Heist — first playable slice
+
+## Host integration
+Undertale remains the game being launched. The mod changes its flow by adding a heist encounter and returning control to the host game.
+
+## First slice
+Location: Underground / a new heist encounter attached to the existing Undertale flow.
+
+Objective: perform a short vault-style heist with three phases:
+- Infiltration: reach the objective without raising the alarm.
+- Heist: interact with the objective while an escalating timer runs.
+- Escape: reach the exit while enemies/pressure increase.
+
+## PAYDAY elements
+- Crew: Dallas, Chains, Wolf, Hoxton as selectable flavor/role presets.
+- Equipment: armor/utility and deployable-style choices represented by Undertale-compatible mechanics.
+- Alarm state: silent -> suspicious -> loud.
+- Contract completion and escape result.
+
+## Undertale elements
+- Undertale dialogue boxes and encounter flow remain the presentation model.
+- Existing player-owned Undertale content is used by the host rather than copied into this project.
+- The mashup should preserve Undertale's movement/interaction feel while adding heist objectives.
+
+## Multiplayer
+Target: solo + cooperative play. This is not implemented yet. Do not claim a player limit or connection method until the project actually provides one and two-copy testing succeeds.
+
+## First implementation target
+Before adding the full crew/contract system, implement one complete contract end-to-end. This gives us a real gameplay slice to test and capture for the Melty listing.
+
+# Melty listing draft
+
+## Title
+PAYDAY 2 × Undertale: Underground Heist
+
+## Tagline
+A PAYDAY-style heist woven into Undertale's Underground.
+
+## Description
+Turn an Undertale run into a heist: infiltrate a new Underground contract, manage the alarm, complete the objective, and escape. The project combines Undertale's host gameplay flow with PAYDAY 2-inspired crew roles, objectives, equipment, and escalating heist phases.
+
+## Required game
+Undertale — the player's own installed copy.
+
+## Multiplayer
+Planned: cooperative play. Connection details and player capacity are intentionally unspecified until implemented and tested.
+
+## Release status
+Prototype/source stage. Not ready for publication.
+
+## Credits / license / remix permissions
+Not decided yet; must be confirmed before publishing.
